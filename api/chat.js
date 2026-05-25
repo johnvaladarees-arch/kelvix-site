@@ -1,10 +1,8 @@
 export default async function handler(req, res) {
-  // Permitir apenas POST
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Método não permitido' });
   }
 
-  // CORS — permite o site chamar essa função
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -33,6 +31,24 @@ A Kelvix oferece:
 - Aplicativos web: sistemas sob medida do zero ao deploy, design moderno e responsivo
 - Automações: eliminação de tarefas repetitivas, integração entre ferramentas e sistemas
 
+TABELA DE PREÇOS:
+
+Agente de IA no WhatsApp:
+- Básico (R$ 800 a R$ 1.200): catálogo simples, até 20 perguntas configuradas, entrega em 5-7 dias
+- Intermediário (R$ 1.500): catálogo maior, fluxo personalizado, horário de funcionamento, entrega em 7-10 dias
+- Completo (R$ 1.500 a R$ 1.800 dependendo do escopo): IA real com memória, tom de voz personalizado, suporte 30 dias incluso, entrega em 10-14 dias
+- Manutenção mensal: R$ 120 a R$ 200 (atualização de produtos, ajuste de respostas, monitoramento)
+
+Aplicativos Web:
+- Simples (R$ 1.800 a R$ 2.500): landing page, sistema básico, entrega em 2 semanas
+- Intermediário (R$ 2.500 a R$ 3.500): sistema completo com painel administrativo, entrega em 3-4 semanas
+- Completo (sob consulta a partir de R$ 4.000): integrações avançadas, múltiplos módulos
+
+Automações:
+- Simples (R$ 600 a R$ 900): automação de planilhas, relatórios, notificações
+- Intermediária (R$ 1.000 a R$ 1.500): integração entre sistemas, fluxos automáticos
+- Completa (a partir de R$ 2.000): múltiplas integrações, dashboards, sob consulta
+
 Diferenciais:
 - Entrega rápida e sem burocracia
 - Suporte contínuo pós-entrega
@@ -42,14 +58,15 @@ Diferenciais:
 Contato:
 - WhatsApp: (47) 98833-9355
 - E-mail: johnvaladarees@gmail.com
+- Site: kelvix-site.vercel.app
 
 Regras:
 - Seja simpático, direto e profissional
 - Responda em português brasileiro
-- Respostas curtas e objetivas (máximo 3 linhas)
-- Se não souber algo, direcione para o WhatsApp
-- Nunca invente preços — diga que depende do projeto e ofereça um orçamento gratuito
-- Sempre que possível, convide o visitante a falar pelo WhatsApp`,
+- Respostas curtas e objetivas (máximo 3-4 linhas)
+- Sempre que possível, convide o visitante a falar pelo WhatsApp para um orçamento personalizado
+- Deixe claro que os preços são a partir de e que o valor final depende do escopo do projeto
+- Nunca invente informações — se não souber algo, direcione para o WhatsApp`,
         messages: [
           ...(history || []),
           { role: 'user', content: message }
