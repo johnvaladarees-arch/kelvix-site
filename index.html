@@ -123,6 +123,19 @@ section{padding:100px 80px;position:relative;}
 .pdesc{font-size:13px;color:var(--grey);line-height:1.9;}
 .ptype{margin-top:auto;padding-top:20px;color:var(--blue);font-size:11px;letter-spacing:2px;}
 
+/* OFERTA */
+.offer-band{background:linear-gradient(135deg,rgba(26,111,244,.14),rgba(0,180,255,.05));border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.offer-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;}
+.offer-list{display:grid;gap:16px;margin:34px 0 0;}
+.offer-item{display:flex;gap:14px;align-items:flex-start;color:var(--grey);font-size:14px;line-height:1.8;}
+.offer-mark{width:28px;height:28px;flex-shrink:0;border:1px solid rgba(0,180,255,.35);color:var(--cyan);display:flex;align-items:center;justify-content:center;font-size:13px;font-family:'Orbitron',sans-serif;}
+.offer-panel{border:1px solid var(--border);background:rgba(255,255,255,.025);padding:36px 32px;}
+.offer-panel-title{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:700;color:var(--white);letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;}
+.offer-panel p{color:var(--grey);font-size:14px;line-height:1.9;margin-bottom:24px;}
+.offer-mini{display:grid;gap:12px;margin-bottom:28px;}
+.offer-mini div{border-left:2px solid var(--blue);padding-left:14px;color:var(--grey);font-size:13px;line-height:1.7;}
+.offer-mini strong{display:block;color:var(--white);font-size:13px;margin-bottom:2px;}
+
 /* CONTATO */
 .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
 .clist{display:flex;flex-direction:column;gap:24px;margin-bottom:40px;}
@@ -177,7 +190,7 @@ footer{background:#04040c;border-top:1px solid var(--border);padding:36px 80px;d
   .nav-logo img{height:50px;}
   section{padding:70px 24px;}
   .sgrid,.steps-wrap,.pgrid{grid-template-columns:1fr;}
-  .about-grid,.cgrid{grid-template-columns:1fr;}
+  .about-grid,.cgrid,.offer-grid{grid-template-columns:1fr;}
   .hero{padding:100px 24px 60px;} .hero-logo-bg{display:none;}
   .hero-logo-main{width:260px;}
   footer{flex-direction:column;gap:20px;text-align:center;padding:28px 24px;}
@@ -209,9 +222,10 @@ footer{background:#04040c;border-top:1px solid var(--border);padding:36px 80px;d
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#processo">Como Funciona</a></li>
     <li><a href="#portfolio">Portfólio</a></li>
+    <li><a href="#diagnostico">Diagnóstico</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
-  <a href="https://wa.me/5547988339355?text=Olá!%20Vim%20pelo%20site%20da%20Kelvix%20e%20gostaria%20de%20saber%20mais." class="nav-cta">💬 Fale Conosco</a>
+  <a href="https://wa.me/5547988339355?text=Olá!%20Vim%20pelo%20site%20da%20Kelvix%20e%20quero%20um%20diagnóstico%20gratuito%20de%20automação." class="nav-cta">💬 Diagnóstico Grátis</a>
 </nav>
 
 <!-- HERO -->
@@ -226,8 +240,8 @@ footer{background:#04040c;border-top:1px solid var(--border);padding:36px 80px;d
       Criamos <strong>sites, aplicativos, automações e agentes de IA</strong> para empresas que querem vender mais, atender melhor e economizar tempo.
     </p>
     <div class="hero-btns">
-      <a href="https://wa.me/5547988339355?text=Olá!%20Vim%20pelo%20site%20da%20Kelvix!" class="btn-p">📲 Falar Agora</a>
-      <a href="#servicos" class="btn-s">Ver Serviços</a>
+      <a href="https://wa.me/5547988339355?text=Olá!%20Vim%20pelo%20site%20da%20Kelvix%20e%20quero%20um%20diagnóstico%20gratuito%20da%20minha%20empresa." class="btn-p">📲 Diagnóstico Gratuito</a>
+      <a href="#diagnostico" class="btn-s">Ver Oferta</a>
     </div>
   </div>
   <div class="hero-scroll">SCROLL<div class="hero-scroll-line"></div></div>
@@ -382,12 +396,40 @@ footer{background:#04040c;border-top:1px solid var(--border);padding:36px 80px;d
   </div>
 </section>
 
+<!-- DIAGNÓSTICO -->
+<section class="offer-band" id="diagnostico">
+  <div class="si">
+    <div class="offer-grid">
+      <div>
+        <div class="stag reveal">// Oferta de entrada</div>
+        <div class="stitle reveal">DIAGNÓSTICO <span>GRATUITO</span></div>
+        <div class="ssub reveal">Em uma conversa rápida, entendemos sua operação e mostramos onde tecnologia, automação ou IA podem reduzir trabalho manual e gerar mais resultado.</div>
+        <div class="offer-list reveal">
+          <div class="offer-item"><span class="offer-mark">01</span><span>Mapeamos processos repetitivos, gargalos de atendimento, planilhas manuais e tarefas que tomam tempo da equipe.</span></div>
+          <div class="offer-item"><span class="offer-mark">02</span><span>Indicamos oportunidades práticas para aplicar site, sistema, dashboard, automação ou agente de IA.</span></div>
+          <div class="offer-item"><span class="offer-mark">03</span><span>Você recebe um caminho claro do que pode ser feito primeiro, com prioridade, escopo e próximo passo.</span></div>
+        </div>
+      </div>
+      <div class="offer-panel reveal">
+        <div class="offer-panel-title">Para quem é</div>
+        <p>Ideal para empresas que sabem que perdem tempo com tarefas manuais, mas ainda não sabem exatamente qual solução tecnológica contratar.</p>
+        <div class="offer-mini">
+          <div><strong>Atendimento</strong>Responder clientes, qualificar leads e organizar contatos.</div>
+          <div><strong>Operação</strong>Controlar pedidos, rotas, tarefas, equipes e indicadores.</div>
+          <div><strong>Gestão</strong>Automatizar relatórios, planilhas e acompanhamento de resultados.</div>
+        </div>
+        <a href="https://wa.me/5547988339355?text=Olá!%20Quero%20agendar%20um%20diagnóstico%20gratuito%20com%20a%20Kelvix%20para%20entender%20onde%20posso%20usar%20automação%20ou%20IA%20na%20minha%20empresa." class="btn-p">Agendar Diagnóstico</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTATO -->
 <section class="bg2" id="contato">
   <div class="si">
     <div class="stag reveal">// Contato</div>
     <div class="stitle reveal">VAMOS <span>CONVERSAR?</span></div>
-    <div class="ssub reveal">Sem burocracia. Uma conversa já resolve. Orçamento gratuito e sem compromisso.</div>
+    <div class="ssub reveal">Comece pelo diagnóstico gratuito. Sem burocracia, sem compromisso e com foco em oportunidades reais para sua empresa.</div>
     <div class="cgrid">
       <div class="reveal">
         <div class="clist">
@@ -404,14 +446,14 @@ footer{background:#04040c;border-top:1px solid var(--border);padding:36px 80px;d
             <div class="ctext"><strong>Blumenau — SC</strong><span>Atendemos todo o Brasil</span></div>
           </div>
         </div>
-        <a href="https://wa.me/5547988339355?text=Olá!%20Vim%20pelo%20site%20da%20Kelvix%20e%20gostaria%20de%20um%20orçamento." class="btn-p">💬 Chamar no WhatsApp</a>
+        <a href="https://wa.me/5547988339355?text=Olá!%20Vim%20pelo%20site%20da%20Kelvix%20e%20quero%20agendar%20um%20diagnóstico%20gratuito." class="btn-p">💬 Agendar Diagnóstico</a>
       </div>
       <div class="reveal">
         <form class="cform" id="contactForm" action="https://formspree.io/f/xqejdvkd" method="POST">
           <input type="text" name="nome" placeholder="Seu nome" required>
           <input type="email" name="email" placeholder="Seu e-mail" required>
-          <input type="text" name="assunto" placeholder="Assunto" required>
-          <textarea name="mensagem" placeholder="Conta o que você precisa..." required></textarea>
+          <input type="text" name="assunto" placeholder="Assunto" value="Diagnóstico gratuito Kelvix" required>
+          <textarea name="mensagem" placeholder="Conte brevemente o que sua empresa faz e qual processo você quer melhorar..." required></textarea>
           <button type="submit" class="btn-p" id="submitBtn">Enviar Mensagem</button>
           <div id="formMsg" style="display:none;margin-top:12px;padding:14px;font-size:14px;border-left:2px solid var(--cyan);color:var(--cyan);background:rgba(0,180,255,0.06);"></div>
         </form>
