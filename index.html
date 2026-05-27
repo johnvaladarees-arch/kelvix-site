@@ -75,7 +75,7 @@ section{padding:100px 80px;position:relative;}
 .bg2{background:var(--bg2);}
 
 /* SERVIÇOS */
-.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
 .scard{background:rgba(255,255,255,.02);border:1px solid var(--border);border-top:2px solid var(--blue);padding:40px 32px;transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden;cursor:default;}
 .scard:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(26,111,244,0.15);border-color:rgba(0,180,255,.3);}
 .scard-icon{font-size:38px;margin-bottom:22px;display:block;}
@@ -197,6 +197,9 @@ footer{background:#04040c;border-top:1px solid var(--border);padding:36px 80px;d
   .flinks{flex-wrap:wrap;justify-content:center;}
   .steps-wrap::before{display:none;}
 }
+@media(max-width:1150px) and (min-width:901px){
+  .sgrid{grid-template-columns:repeat(2,1fr);}
+}
 
 .scard-extra{max-height:0;overflow:hidden;transition:max-height .5s ease,opacity .4s ease;opacity:0;}
 .scard-extra.open{max-height:300px;opacity:1;}
@@ -254,6 +257,23 @@ footer{background:#04040c;border-top:1px solid var(--border);padding:36px 80px;d
     <div class="stitle reveal">NOSSOS <span>SERVIÇOS</span></div>
     <div class="ssub reveal">Soluções digitais completas para tirar processos do improviso e colocar tecnologia funcionando no dia a dia da empresa.</div>
     <div class="sgrid">
+      <div class="scard reveal" id="card-site">
+        <span class="scard-icon">🌐</span>
+        <div class="scard-name">Sites Profissionais</div>
+        <div class="scard-desc">Sites institucionais e landing pages modernas para apresentar sua empresa, gerar confiança e converter visitantes em contatos.</div>
+        <div class="scard-extra" id="extra-site">
+          <div class="scard-divider"></div>
+          <ul class="scard-list">
+            <li>✦ Design moderno e responsivo</li>
+            <li>✦ Página otimizada para WhatsApp e captação de leads</li>
+            <li>✦ SEO básico e compartilhamento profissional</li>
+            <li>✦ Formulário de contato integrado</li>
+            <li>✦ Publicação e configuração na Vercel</li>
+          </ul>
+          <a href="#contato" class="scard-cta">Quero um site →</a>
+        </div>
+        <span class="scard-link" onclick="toggleCard('site')">Saiba mais <span class="scard-arrow" id="arrow-site">↓</span></span>
+      </div>
       <div class="scard reveal" id="card-ia">
         <span class="scard-icon">🤖</span>
         <div class="scard-name">Agentes de IA</div>
@@ -620,7 +640,7 @@ function toggleCard(id) {
   const arrow = document.getElementById('arrow-' + id);
   const isOpen = extra.classList.contains('open');
   // Fechar todos
-  ['ia','app','auto'].forEach(k => {
+  ['site','ia','app','auto'].forEach(k => {
     document.getElementById('extra-' + k).classList.remove('open');
     document.getElementById('arrow-' + k).style.transform = 'rotate(0deg)';
   });
